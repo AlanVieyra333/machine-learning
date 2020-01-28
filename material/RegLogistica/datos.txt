@@ -1,0 +1,8 @@
+# brew cask install anaconda
+# pip install opencv-python
+
+# /usr/local/anaconda3/lib/python3.7/site-packages/sklearn/datasets/data
+
+# A futuro:
+# cómo leer un archivo CSV propio
+#

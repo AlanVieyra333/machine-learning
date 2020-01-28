@@ -1,0 +1,10 @@
+Regresión logística
+
+Preguntas que nos quedan:
+
+1. ¿Cómo validar el modelo?
+2. ¿Funciona el modelo tomando solo las dos primeras características?
+  Tamaños de sépalos
+3. ¿Funciona el modelo tomando solo las segundos dos características?
+  Tamaños de pétalos
+
