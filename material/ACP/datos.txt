@@ -1,0 +1,18 @@
+14.01.2020
+
+/usr/local/anaconda3/pkgs/scikit-learn-0.21.3-py37h27c97d8_0/lib/python3.7/site-packages/sklearn/datasets/data
+
+ls -l 
+
+-rw-rw-r--  2 fraga  staff   34742 Sep 24 19:13 boston_house_prices.csv
+-rw-rw-r--  2 fraga  staff  119913 Sep 24 19:13 breast_cancer.csv
+-rw-rw-r--  2 fraga  staff   23803 Sep 24 19:13 diabetes_data.csv.gz
+-rw-rw-r--  2 fraga  staff    1050 Sep 24 19:13 diabetes_target.csv.gz
+-rw-rw-r--  2 fraga  staff   57523 Sep 24 19:13 digits.csv.gz
+-rw-rw-r--  2 fraga  staff    2734 Sep 24 19:13 iris.csv
+-rw-rw-r--  2 fraga  staff     212 Sep 24 19:13 linnerud_exercise.csv
+-rw-rw-r--  2 fraga  staff     219 Sep 24 19:13 linnerud_physiological.csv
+-rw-rw-r--  2 fraga  staff   11157 Sep 24 19:13 wine_data.csv
+
+
+
