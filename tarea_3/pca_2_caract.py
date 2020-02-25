@@ -48,7 +48,7 @@ print( Xentrena.shape, Xprueba.shape, yentrena.shape, yprueba.shape )
 
 y = np.atleast_2d(yentrena).T
 X = np.append( Xentrena, y, axis=1 )
-X = Xentrena
+# X = Xentrena
 
 mu, eig = cv2.PCACompute( X, np.array( [] ), maxComponents=2)
 print( mu )
