@@ -20,17 +20,20 @@ media = 0
 variabilidad = 100.0
 
 # Elegir el mejor valor de K, usando validación cruzada.
+etapas = 10
 for kAux in range(1,11):
     modelo = KNeighborsClassifier(n_neighbors=kAux)
 
     # Validación cruzada.
     # Con cv=5, tenemos 5 pruebas
     mediciones = cross_val_score(
-        modelo, X_train, Y_train, cv=5, scoring="accuracy")
+        modelo, X_train, Y_train, cv=etapas, scoring="accuracy")
     print(kAux, mediciones)
     # Grafica
-    plt.scatter( np.repeat(kAux, 5), mediciones, c='b', s=5)
+    plt.scatter( np.repeat(kAux, etapas), mediciones, c='b', s=5)
 
+    print("  Media: %.6f" % mediciones.mean())
+    print("  Variabilidad: %.6f" % mediciones.std())
     if mediciones.mean() > media and mediciones.std() < variabilidad:
         media = mediciones.mean()
         variabilidad = mediciones.std()
