@@ -1,0 +1,70 @@
+25.03.2020
+
+Implementando la prueba t de Student 
+
+Este es una de las pruebas estadísticos más famosas.
+Este permite determinar si dos conjuntos de datos son
+significativamente diferentes uno del otro.
+
+En la práctica, la prueba t nos permite determinar si dos muestras
+de datos provienen de distribuciones subyacentes con la misma 
+media o valor esperado.
+
+Esto significa que se puede usar la prueba t para determinar si las
+mediciones de dos clasificadores son idénticas. A esto se le
+llama la hipótesis nula, esto es porque esta es la hipótesis
+que se quiere nulificar. En otras palabras, se busca la evidencia
+para rechazar la hipótesis debido a que se quiere asegurar
+que un clasificador es significativamente mejor que el otro.
+
+Se acepta o se rechaza la hipótesis nula basándose en el
+valor del parámetro p que la prueba t regresa.
+El valor de p toma valores dentro del intervalo [0,1].
+Un valor p de 0.05 significa que la hipótesis nula es correcta
+solamente 5 de 100 veces. Un valor pequeño de p indica entonces
+una fuerte evidencia de que la hipótesis puede ser rechazada con 
+seguridad. Es costumbre usar p=0.05 como un valor de corte debajo
+del cual se rechaza la hipótesis nula. Si todo esto es confuso,
+se puede pensar de esta manera: cuando se ejecuta una prueba t
+para el propósito de comparar las mediciones de un clasificador,
+lo que se busca es un valor pequeño de p, debido a que esto
+significa que los dos clasificadores dar resultados significativamente
+diferentes.
+
+Hice un programa que recibe los valores de dos medias.
+El programa genera dos secuencias de datos con 30 valores,
+estos valores son aleatorios con una distribución normal de media
+dada y desviación estándar fija igual a 0.1 
+
+Recuerden: la hipótesis nula es que ambas secuencias son idénticas.
+Resultados:
+
+$ python ttest.py 10.0 10.0
+-0.33983438525508824 p= 0.7352088643027159
+
+El valor de p > 0.05, la hipótesis nula se acepta: ambas secuencias
+son idénticas.
+
+$ python ttest.py 10.0 10.1
+-3.9377928817935968 p= 0.00022305683497087563
+
+El valor de p < 0.05, la hipótesis nula se rechaza: ambas secuencias
+son diferentes.
+
+$ python ttest.py 10.1 10.0
+2.1983910993236573 p= 0.031924971314789934
+
+El valor de p < 0.05, la hipótesis nula se rechaza: ambas secuencias
+son diferentes.
+
+$ python ttest.py 10.0 10.01
+-0.16925001280321378 p= 0.866188904712331
+
+El valor de p > 0.05, la hipótesis nula se acepta: ambas secuencias
+son idénticas.
+
+$ python ttest.py 10.01 10.0
+0.939716595221935 p= 0.35126019801349484
+
+El valor de p > 0.05, la hipótesis nula se acepta: ambas secuencias
+son idénticas.
