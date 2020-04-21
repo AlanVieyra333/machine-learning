@@ -45,6 +45,7 @@ theta2 = vthetas[0, 2]
 print("Thetas:", vthetas.shape, vthetas)
 
 ret, Ypredict = regLog.predict(Xtrain)
+print(Ytrain.shape, Ypredict.shape)
 exactitud = metrics.accuracy_score(Ytrain, Ypredict)
 print("Exactitud:", exactitud)
 
